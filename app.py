@@ -14,6 +14,6 @@ for i in data:
     list.append(i)
     st.write(i)
 
-df = DataFrame(columns=(list))
+df = DataFrame(columns=list)
 
 st.dataframe(df)
