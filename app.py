@@ -12,7 +12,7 @@ st.json(data)
 for i in data:
     st.write(i)
 
-with open data as f:
+with open (data) as f:
     data1 = json.loads(f.read())
 df = ps.json_normalize(data1)
 st.dataframe(df)
