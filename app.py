@@ -14,6 +14,6 @@ for i in data:
 
 df = pd.DataFrame(data.items())
 df = df.drop([0])
-#df = df.reset_index(drop=True)
+df = df.reset_index(drop=True)
 
 st.dataframe(df)
