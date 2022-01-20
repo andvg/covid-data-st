@@ -12,7 +12,9 @@ st.json(data)
 for i in data:
     st.write(i)
 
-with open(data) as f:
-    data1 = json.loads(f.read())
-df = ps.json_normalize(data1)
+df = pd.DataFrame(data.items()).transpose()
+#df.columns = ltA.iloc[0]
+#df = df.drop([0])
+#df = df.reset_index(drop=True)
+
 st.dataframe(df)
