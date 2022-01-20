@@ -9,11 +9,10 @@ resp = r.get(url)
 
 data = resp.json()
 st.json(data)
-list = []
 for i in data:
-    list.append(i)
     st.write(i)
 
-df = DataFrame(columns=list)
-
+with open(data) as f:
+    data1 = json.loads(f.read())
+df = ps.json_normalize(data1)
 st.dataframe(df)
