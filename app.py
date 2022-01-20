@@ -11,5 +11,5 @@ data = resp.json()
 for i in data:
     st.write(i)
 
-df = pd.dataframe(resp)
+df = pd.DataFrame(data)
 st.dataframe(df)
