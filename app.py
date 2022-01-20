@@ -8,4 +8,5 @@ url = 'https://covid-api.mmediagroup.fr/v1/cases?country=Italy'
 resp = r.get(url)
 data = resp.json()
 
-st.json(data)
+for i in data:
+    st.json(i)
