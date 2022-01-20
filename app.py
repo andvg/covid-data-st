@@ -12,8 +12,8 @@ st.json(data)
 for i in data:
     st.write(i)
 
-df = pd.DataFrame(data.items())
-#df.columns = ltA.iloc[0]
+df = pd.DataFrame(data.items()).transpose()
+#df.columns = df.iloc[0]
 #df = df.drop([0])
 #df = df.reset_index(drop=True)
 
