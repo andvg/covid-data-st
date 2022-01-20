@@ -17,4 +17,4 @@ df = pd.DataFrame(data.items())
 #df = df.drop([0])
 #df = df.reset_index(drop=True)
 
-print(df)
+st.dataframe(df)
