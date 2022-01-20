@@ -6,7 +6,8 @@ import json
 url = 'https://covid-api.mmediagroup.fr/v1/cases?country=Italy'
 
 resp = r.get(url)
-data = resp.json()
+st.write(resp)
 
+data = resp.json()
 for i in data:
-    st.json(i)
+    st.write(i)
