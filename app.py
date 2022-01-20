@@ -8,8 +8,11 @@ url = 'https://covid-api.mmediagroup.fr/v1/cases?country=Italy'
 resp = r.get(url)
 
 data = resp.json()
+st.json(data)
 for i in data:
     st.write(i)
 
-df = pd.read_json(data)
+with open data as f:
+    data1 = json.loads(f.read())
+df = ps.json_normalize(data1)
 st.dataframe(df)
